@@ -1,0 +1,87 @@
+* {
+  /* Selectam toate etichetele */
+  box-sizing: border-box; /*pentru calculul conntinut + padding + border + margini */
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex; /*se va reflecta aranjamentul in elementele copii*/
+  flex-direction: row; /*afisam elementele pe randuri ( orizontala) */
+  flex-wrap: wrap; /*realizeaza trecerea elementelor pe mai multe randuri*/
+}
+
+.container-stanga {
+  width: 30%;
+  background-color: cadetblue;
+  padding: 30px; /*toate laturile au 30px*/
+  border-right: 2px solid cadetblue; /*2px: grosimea , solid: tipul, ultima:culoarea*/
+}
+
+.container-dreapta {
+  width: 70%;
+  padding: 30px;
+}
+
+.imagine-persoana {
+  border-radius: 50%;
+  border: 2px solid rgb(49, 82, 83);
+  display: block; /*se intinde pe tot width-ul disponibil*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px; /*Scris mai simplu margin:30px auto; (30px sus+jos ,auto stanga + dreapta)*/
+}
+
+h1 {
+  color: rgb(49, 82, 83);
+  text-transform: uppercase; /*Transforma textul in litere mari*/
+}
+
+h3 {
+  border-bottom: 2px solid rgb(49, 82, 83); /*grosimea,tipul,culoarea*/
+}
+
+ul {
+  padding: 15px;
+}
+
+h4,
+p {
+  /*toate h4 si toate p*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.buton-mai-mult {
+  font-weight: bold; /*face textul bold*/
+  display: inline-block; /*avem nevoie de display sa umblam la padding/margin*/
+  padding: 5px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.sectiune {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.element-ascuns{
+  display: none;
+}
+
+
+/*responsiveness----- la sfarsitul fisierului css*/
+@media screen and (max-width: 769px) {
+  /* intervalul 0-> 769px */
+  .container-stanga {
+    width: 100%;
+    border-right: none;  /*stergem bordura  din dreapta*/
+    border-bottom: 2px solid rgb(49, 82, 83);
+  }
+
+  .container-dreapta {
+    width: 100%;
+  }
+}
